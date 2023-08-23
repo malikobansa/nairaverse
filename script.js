@@ -2,6 +2,11 @@ document.getElementById('logBtn').addEventListener('click', function() {
     document.getElementById('popupForm').style.display = 'block';
     console.log("clicked")
   });
+
+  document.getElementById('signBtn').addEventListener('click', function() {
+    document.getElementById('popupForm').style.display = 'block';
+    console.log("clicked")
+  });
   
   document.getElementById('closeBtn').addEventListener('click', function() {
     document.getElementById('popupForm').style.display = 'none';

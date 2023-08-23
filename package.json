@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "paystack": "^2.0.1"
+  }
+}

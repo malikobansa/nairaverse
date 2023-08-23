@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Paystack Single Transfer Example</title>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+  <h1>Paystack Single Transfer</h1>
+  <form id="paymentForm">
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" required>
+    <br><br>
+    <label for="recipient">Recipient:</label>
+    <input type="text" id="recipient" name="recipient" required>
+    <br><br>
+    <label for="reason">Reason:</label>
+    <input type="text" id="reason" name="reason" required>
+    <br><br>
+    <button type="button" onclick="pay()">Pay Now</button>
+  </form>
+
+  <script>
+    function pay() {
+      var amount = document.getElementById('amount').value;
+      var recipient = document.getElementById('recipient').value;
+      var reason = document.getElementById('reason').value;
+
+      var handler = PaystackPop.setup({
+        key: 'pk_live_c5240f3c34199d9da0832cec2734c2ce138007a4',
+        email: 'hackobansa@gmail.com',
+        amount: amount * 100,
+        metadata: {
+          custom_fields: [
+            {
+              display_name: "Recipient",
+              variable_name: "recipient",
+              value: recipient
+            },
+            {
+              display_name: "Reason",
+              variable_name: "reason",
+              value: reason
+            }
+          ]
+        },
+        callback: function (response) {
+          // Handle the response from Paystack
+          console.log(response);
+          // You can perform additional actions here, such as updating your database with the transfer details
+        },
+        onClose: function () {
+          alert('Payment window closed.');
+        }
+      });
+
+      handler.openIframe();
+    }
+  </script>
+</body>
+</html>
