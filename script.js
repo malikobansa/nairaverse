@@ -1,28 +1,35 @@
-document.getElementById('logBtn').addEventListener('click', function() {
-    document.getElementById('popupForm').style.display = 'block';
-    console.log("clicked")
+import createKindeClient from "@kinde-oss/kinde-auth-pkce-js";
+
+  const kinde = await createKindeClient({
+    client_id: "8b225b4c0cdc4e78b7b5486d1020653d",
+    domain: "https://nairaversey.kinde.com",
+    redirect_uri: window.location.origin
   });
 
-  document.getElementById('signBtn').addEventListener('click', function() {
-    document.getElementById('popupForm').style.display = 'block';
-    console.log("clicked")
+
+let login = document.getElementById("logBtn");
+
+login.addEventListener("click", async () => {
+    await kinde.login();
   });
   
-  document.getElementById('closeBtn').addEventListener('click', function() {
-    document.getElementById('popupForm').style.display = 'none';
+let sign = document.getElementById("signBtn");
+
+sign.addEventListener("click", async () => {
+    await kinde.register();
   });
-  
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-  
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-  
-    // Perform form submission or validation here
-    // You can use AJAX to send the form data to a server
-  
-    // Display a success message
-    alert('Form submitted successfully!');
-    document.getElementById('popupForm').style.display = 'none';
-  });
-  
+
+  const user = await kinde.getUser();
+  await render(user);
+
+  on_redirect_callback: (user, appState) => {
+    console.log({user, appState});
+    if (user) {
+      // render logged in view
+    } else {
+      // render logged out view
+    }
+  };
+on_error_callback: (error) => {
+    console.log(error);
+  };

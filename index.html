@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
         <header>
@@ -29,83 +30,131 @@
                 </ul>
                  
                 <ul class="listed">
-                  <li><button class="Btn" id="logBtn">Log In</button></li>
-                  <li><button class="Btn" id="signBtn">Sign Up</button></li>
+                  <li><button class="Btn" type="button" id="logBtn">Log In</button></li>
+                  <li><button class="Btn" type="button" id="signBtn">Sign Up</button></li>
                 </ul>
             </ul>
         </header>
         <main>
-            <div id="popupForm" class="popup">
-                <div class="form-image">
-                    <img src="img/sign.jpg" alt="" class="form">
-                </div>
-               <div class="form-image">
-                <form>
-                  <h2>Log In</h2>
-                  <label for="name" class="forms">Email:</label>
-                  <input type="email" id="name" class="forms"  placeholder="Email">
-                  <label for="email">Password:</label>
-                  <input type="password" id="name" placeholder="Password" required>
-                  <button type="submit" class="submit">Submit</button>
-                  <button id="closeBtn">Close</button>
-                </form>
-                </div>
-              </div>
-            <div class="container">
-                <img src="img/abs.png" alt="" class="img">
-            </div>
-            <div class="container texter">
+         <div class="container">
+            <div class="containers texter">
                 <div class="text">
-                  <h1>Access All Payments across the<br/>
-                      globe with over 150+ <br/>
-                      currencies</h1>
+                  <h3><span class="wow">WOW!</span> Real bank right in your smartphone</h3>
+                  <h1>Digital Banking Made Simple <img src="img/paper.jpg" class="img" alt=""></h1>
+                  <p>Open a free account in minutes right from your phone and make your money go further.</p>
+                  <div class="box">
+                    <button class="btns"> <a href="/pages/account.html"> Open Account </a><i class="fa-solid fa-arrow-right"></i></button>
+                     <p>Spend, save and manage your money, all in one place</p>
+                  </div>
                 </div>
-                <div class="btn">
-                    <button id="btn">Get Started</button>
+                <div class="containers">
+                    <img src="img/transfer.jpg" alt="" class="image">
                 </div>
-            </div>
-            <div class="container">
-                <img src="img/na.png" alt="" class="img">
             </div>
         </main>
         <section class="grid">
+            <div class="heads">
+              <h1 class="header">Personal and business banking, at your fingertips</h1>
+            </div>
+            <div class="contain">
             <div class="grid-contain">
-                <div class="grid-container">
-                   <img src="img/pkb.jpg" alt="" class="grid-item" id="item">
-                </div>
-                <div class="grid-container">
-                     <div class="texts">
-                        <h2>Secure Transactions</h2>
-                        <p>Our platform ensures the security of your financial transactions through advanced encryption.</p>
-                     </div>
+                <img src="img/piggy.svg" alt="" class="piggy">
+                <div class="texts">
+                    <h1>Save</h1>
+                    <p>Explore the power of simpler and smarter banking online.</p>
                 </div>
             </div>
             <div class="grid-contain">
-                <div class="grid-container">
-                   <img src="img/pao.jpg" alt="" class="grid-item">
-                </div>
-                <div class="grid-container">
-                     <div class="texts">
-                        <h2>Realtime Insights</h2>
-                         <p>Stay up-to-date with real-time insights and analytics to make informed financial decisions.</p>
-                     </div>
+                <img src="img/smartphone.svg" alt="" class="piggy">
+                <div class="texts">
+                    <h1>Manage</h1>
+                    <p>Explore the power of simpler and smarter banking online.</p>
                 </div>
             </div>
             <div class="grid-contain">
-                <div class="grid-container">
-                   <img src="img/pm.jpg" alt="" class="grid-item">
+                <img src="img/cards.svg" alt="" class="piggy">
+                <div class="texts">
+                    <h1>Spend</h1>
+                    <p>Explore the power of simpler and smarter banking online.</p>
                 </div>
-                <div class="grid-container">
-                     <div class="texts">
-                        <h2>24/7 Support</h2>
-                        <p>Our dedicated support team is available 24/7 to assist you with any questions or concerns.</p>
+            </div>
+            <div class="grid-contain">
+                <img src="img/money.svg" alt="" class="piggy">
+                <div class="texts">
+                    <h1>Borrow</h1>
+                    <p>Explore the power of simpler and smarter banking online.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+        <aside>
+            <div class="divs" id="home">
+                <img src="img/home.png" class="home" alt="">
+                    <div class="spans">
+                        <span class="join">JOIN US</span>
+                        <h2>Put money in your hands</h2>
+                        <p>Track your money all in one place and make your daily spending seamless.</p>
+                        <button class="learn">Learn More <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
+            </div>
+            <div class="divs">
+                <div class="divs-grid">
+                    <div class="dtext">
+                        <div class="dimg">
+                            <h2>A new kind of bank <img src="img/fire.png"  class="fire"></h2>
+                            <p>Explore the power of simpler and smarter banking online.</p>
+                        </div>
+                        <div class="dimg">
+                            <img src="img/person.png" class="per" alt="">
+                        </div>
+                    </div>
+                        <div class="div">
+                        <div class="todivs one" >
+                            <h1>Choose a Card</h1>
+                            <p>Coming Soon....</p>
+                            <img src="img/card.png" alt="" class="card">
+                        </div>
+                        <div class="todivs two">
+                            <h1>Easy Payments</h1>
+                            <p>Learn more <i class="fa-solid fa-circle-chevron-right circle"></i></p>
+                            <img src="img/pay.png" alt="" class="card">
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+        </aside>
+
+        <section class="hands">
+            <div class="hands-container">
+                <img src="img/hand.jpg" alt="" class="hans">
+            </div>
+            <div class="hands-container">
+                <div class="hand-text">
+                    <div class="head-hand">
+                       <h4><span class="wows">MOBILE BANKING</span> It's easier as ever!</h4>
+                    </div>
+                    <div class="head-hand">
+                        <h1>How to get started 
+                            <span>
+                                <img src="img/lightning_bolt_3d_2.jpg" alt="" class="bolt">
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="hand-grid">
+                <div class="hand">
+                    <i class="fa-solid fa-download load"></i>
+                </div>
+                <div class="hand">
+                    <h3>Download the app from the Apple App Store or the Google Play Store;</h3>
+                </div>
                 </div>
             </div>
         </section>
         <footer>
             <p> &copy; <span id="naira">₦aira</span><span id="verse">Verse</span> 2023, All rights Reserved</p>
         </footer>
-        <script src="script.js"></script>
+        <script type="module" src="script.js"></script>
 </body>
 </html>
