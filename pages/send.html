@@ -9,6 +9,7 @@
   <form id="paymentForm">
     <label for="amount">Email:</label>
     <input type="text" id="email" name="email" required>
+    <br><br>
     <label for="amount">Amount:</label>
     <input type="number" id="amount" name="amount" required>
     <br><br>
@@ -23,7 +24,6 @@
 
   <script>
     function pay() {
-      const https = require('https')
       var email = document.getElementById("email").value;
       var amount = document.getElementById('amount').value;
       var recipient = document.getElementById('recipient').value;
@@ -34,7 +34,6 @@
         email: email,
         amount: amount * 100,
         percentage_charge: 20,
-        subaccount: recipient,
         metadata: {
           custom_fields: [
             {
@@ -56,7 +55,7 @@
           path: '/subaccount',
           method: 'POST',
           headers: {
-            Authorization: 'Bearer SECRET_KEY',
+            Authorization: 'sk_live_f4ce681ecb88677787f9e9e2d548d05582b4d489',
             'Content-Type': 'application/json'
           }
         }
@@ -68,23 +67,6 @@
           alert('Payment window closed.');
         }
       });
-
-      const req = https.request(options, res => {
-  let data = ''
-
-  res.on('data', (chunk) => {
-    data += chunk
-  });
-
-  res.on('end', () => {
-    console.log(JSON.parse(data))
-  })
-}).on('error', error => {
-  console.error(error)
-})
-
-req.write(params)
-req.end()
 
       handler.openIframe();
     }
