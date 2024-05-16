@@ -1,4 +1,5 @@
 import createKindeClient from "@kinde-oss/kinde-auth-pkce-js";
+import { inject } from "@vercel/analytics"
 
   const kinde = await createKindeClient({
     client_id: "8b225b4c0cdc4e78b7b5486d1020653d",
